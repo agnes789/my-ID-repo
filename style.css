@@ -237,3 +237,28 @@ footer {
   height: auto;
   margin-top: 10px; 
 }
+
+.product {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: block;
+}
+
+.product.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.merch-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.tab-content.active {
+  display: block;
+}
