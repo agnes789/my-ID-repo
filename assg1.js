@@ -1,21 +1,44 @@
-document.getElementById('category-filter').addEventListener('change', function () {
-    const selectedCategory = this.value;
-    const products = document.querySelectorAll('.product');
+function showTab(tabName) {
+  const tabs = document.querySelectorAll('.tab-content');
   
-    products.forEach(product => {
-      product.classList.remove('reveal');
-      product.style.opacity = '0';  // Start the fade-out transition
-      setTimeout(() => {
-        product.style.display = 'none';  // Remove it from the layout
-  
-        if (selectedCategory === 'all' || product.dataset.category === selectedCategory) {
-          product.style.display = 'block';  // Make it visible again
-          setTimeout(() => {
-            product.style.opacity = '1';  // Trigger fade-in transition
-            product.classList.add('reveal');
-          }, 50);
-        }
-      }, 500);  // Wait for transition to complete before removing the element from the layout
-    });
+  tabs.forEach(tab => {
+    tab.classList.remove('active');
   });
+
+  const activeTab = document.getElementById(tabName);
+  if (activeTab) {
+    activeTab.classList.add('active');
+  }
+}
+
+window.onload = function() {
+  showTab('about-us');
   
+  document.getElementById('filter-button').addEventListener('click', function() {
+    const selectedCategory = document.getElementById('category-filter').value;
+    filterProducts(selectedCategory);
+  });
+
+  document.getElementById('category-filter').addEventListener('change', function() {
+    const selectedCategory = this.value;
+    filterProducts(selectedCategory);
+  });
+
+  filterProducts('all');
+};
+
+function filterProducts(category) {
+  const products = document.querySelectorAll('.product');
+  
+  products.forEach(product => {
+    if (category === 'all') {
+      product.classList.remove('hidden'); // Show all
+    } else {
+      if (product.getAttribute('data-category') === category) {
+        product.classList.remove('hidden');
+      } else {
+        product.classList.add('hidden');
+      }
+    }
+  });
+}

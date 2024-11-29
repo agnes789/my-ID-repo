@@ -10,17 +10,17 @@
 </head>
 <body>
   <video class="video-background" autoplay muted loop>
-    <source src="C:/Users/agnes/Downloads/my-ID-repo-main/my-ID-repo/TRANSFORMER.mp4" type="video/mp4">
+    <source src="images/TRANSFORMER.mp4" type="video/mp4">
   </video>
   
   <header>
-    <img src="C:/Users/agnes/Downloads/my-ID-repo-main/my-ID-repo/BUS_LOGO.png" alt="BUS Logo" style="max-width: 250px;">
+    <img src="images/BUS_LOGO.png" alt="BUS Logo" style="max-width: 250px;">
   </header>
   
   <nav>
     <a href="javascript:void(0)" onclick="showTab('about-us')">About Us</a>
     <a href="javascript:void(0)" onclick="showTab('music')">Music</a>
-    <a href="javascript:void(0)" onclick="showTab('merch')">Merch Store</a>
+    <a href="javascript:void(0)" onclick="showTab('merch-store')">Merch Store</a>
     <a href="javascript:void(0)" onclick="showTab('events')">Events</a>
     <a href="javascript:void(0)" onclick="showTab('social-links')">Social Links</a>
   </nav>
@@ -148,7 +148,7 @@
     
   <div id="merch-store" class="tab-content">
     <h2 class="tab-header">Merch Store</h2>
-    <p>Check out our exclusive merchandise!</p>
+    <p class="center-text">Check out our exclusive merchandise!</p>
   
     <label for="category-filter">Filter by Category:</label>
     <select id="category-filter">
@@ -158,8 +158,9 @@
       <option value="photobook">Photobook</option>
     </select>
   
+    <button id="filter-button">Filter</button>
+  
     <div class="merch-container">
-      <!-- T-Shirt Products -->
       <div class="product" data-category="tshirt">
         <img src="images/shirt1.png" alt="T-Shirt 1">
         <h4>BUS BABY TEE (white ver)</h4>
@@ -181,14 +182,12 @@
         <p>฿ 690</p>
       </div>
   
-      <!-- Photocard Products -->
       <div class="product" data-category="photocard">
         <img src="images/photocard.png" alt="Photocard">
         <h4>Photocard</h4>
         <p>฿ 250</p>
       </div>
-  
-      <!-- Photobook Products -->
+      
       <div class="product" data-category="photobook">
         <img src="images/photobook.jpeg" alt="Photobook">
         <h4>Good Quality Picture Photobook</h4>
@@ -198,8 +197,35 @@
   </div>  
    
   <div id="events" class="tab-content">
-    <h2 class="tab-header">Events</h2>
-    <p>Check out our upcoming events and book us for your special occasion. <a href="#">Learn more.</a></p>
+    <h2 class="tab-header">Upcoming Events</h2>
+    <p class="center-text">Check out our upcoming events!</p>
+  
+    <div class="event-container">
+      <div class="event">
+        <h4>SWU Open House 2024</h4>
+        <p>Date: Nov 10, 2024</p>
+      </div>
+      <div class="event">
+        <h4>BUS The 1st Year Diary Concert</h4>
+        <p>Date: Dec 6, 2024</p>
+      </div>
+      <div class="event">
+        <h4>AIS Fantival 2024</h4>
+        <p>Date: Dec 14, 2024</p>
+      </div>
+      <div class="event">
+        <h4>2024 ASIA ARTIST AWARDS</h4>
+        <p>Date: Dec 27, 2024</p>
+      </div>
+      <div class="event">
+        <h4>Coundown 2025</h4>
+        <p>Date: Dec 31, 2024</p>
+      </div>
+      <div class="event">
+        <h4>BUS 1ST Official Concert</h4>
+        <p>Date: Mar 15, 2025</p>
+      </div>
+    </div>
   </div>
   
   <div id="social-links" class="tab-content">
