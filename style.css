@@ -288,5 +288,33 @@ button, .merch-container {
 
 .center-text {
   text-align: center;
-  margin-bottom: 20px; /* Adjust the space between the text and event container */
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  width: 45px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.social-embeds {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: px; /* Add spacing between embeds */
+}
+
+.embed {
+  max-width: 300px; /* Limit maximum width */
+  margin: 0 auto; /* Center each embed */
+  overflow: hidden;
 }
